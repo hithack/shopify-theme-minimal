@@ -28,11 +28,14 @@
     <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
+    {{ content_for_header }}
 </head>
 
 <body>
     <h1>{{ page_title }}</h1>
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+        {{ content_for_layout }}
+    </main>
 </body>
 
 </html>
